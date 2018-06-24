@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css-doodle</title>
+</head>
+<body>
+    <div style='background: #3949AB; width: 100%; height: 300px;'>
+        <css-doodle>
+            :doodle {
+                @grid: 15;
+                size: 100%;
+                perspective: 300px;
+            }
+            clip-path: @shape(fish);
+            will-change: transform; 
+            background: hsla(
+                calc(320 + @index() * 2), 80%, 60%, 
+                @rand(.1, .8) 
+            );    
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-duration: @rand(5s, 16s, .1);
+            
+            --tz: @rand(10vmax, 80vmax);
+            --rt: @rand(120deg, 220deg);
+            
+            @odd {
+                animation-name: r-odd;
+                transform: rotateY(0) translateZ(var(--tz));
+            }
+            
+            @even {
+                animation-name: r-even;
+                transform: 
+                rotateZ(var(--rt)) rotateY(0) 
+                translateZ(var(--tz));
+            } 
+            
+            @keyframes r-odd {
+                to { transform: 
+                rotateY(1turn) translateZ(var(--tz));
+                }
+            }
+            
+            @keyframes r-even {
+                to { transform: 
+                rotateZ(var(--rt)) rotateY(1turn) 
+                translateZ(var(--tz));
+                }
+            }
+            
+            </css-doodle>
+    </div>
+</body>
+</html>
