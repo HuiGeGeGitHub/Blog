@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[css-doodle玩一玩肚兜]]></title>
     <url>%2FBlog%2Fpublic%2F2018%2F06%2F24%2Fcss-doodle%E8%82%9A%E5%85%9C%E7%9A%84%E5%A5%87%E5%B9%BB%E4%B9%8B%E6%97%85%2F</url>
-    <content type="text"><![CDATA[无意间发现有个叫肚兜（doodle）的东西，老司机一看就来劲，所以来尝尝鲜，顺便github赠与宝贵的一颗star 先来几个demo吸引下吃瓜群众 作者：蓝江_老涌链接：https://www.jianshu.com/p/13ce377e6b73來源：简书简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。 doodle是一个基于webcomponent的组件这个和vue里面的组件极其相似，据我推测，vue里面使用了这个方法去实现组件的注册与使用(有空可以研究下vue的组件注册是否用到过此方法)]]></content>
+    <content type="text"><![CDATA[无意间发现有个叫肚兜（doodle）的东西，老司机一看就来劲，所以来尝尝鲜，顺便github赠与宝贵的一颗star 先来几个demo吸引下吃瓜群众 doodle是一个基于webcomponent的组件这个和vue里面的组件极其相似，据我推测，vue里面使用了这个方法去实现组件的注册与使用(有空可以研究下vue的组件注册是否用到过此方法)]]></content>
       <categories>
         <category>css</category>
       </categories>
