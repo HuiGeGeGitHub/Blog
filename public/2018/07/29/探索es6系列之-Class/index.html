@@ -74,7 +74,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="js(es6)," />
 
 
 
@@ -85,16 +85,18 @@
 
 
 
-<meta name="description" content="记录成长点滴">
-<meta property="og:type" content="website">
-<meta property="og:title" content="coder似蜜獾">
-<meta property="og:url" content="http://www.mihuan123.cn/public/archives/2018/index.html">
+<meta name="description" content="es5中如果想编写面向对象的js代码就得蛋疼的借助prototype，es6顺应民意增加了Class这个语法糖，丰富了js世界。">
+<meta name="keywords" content="js(es6)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="探索es6系列之----Class">
+<meta property="og:url" content="http://www.mihuan123.cn/public/2018/07/29/探索es6系列之-Class/index.html">
 <meta property="og:site_name" content="coder似蜜獾">
-<meta property="og:description" content="记录成长点滴">
+<meta property="og:description" content="es5中如果想编写面向对象的js代码就得蛋疼的借助prototype，es6顺应民意增加了Class这个语法糖，丰富了js世界。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-29T03:48:52.587Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="coder似蜜獾">
-<meta name="twitter:description" content="记录成长点滴">
+<meta name="twitter:title" content="探索es6系列之----Class">
+<meta name="twitter:description" content="es5中如果想编写面向对象的js代码就得蛋疼的借助prototype，es6顺应民意增加了Class这个语法糖，丰富了js世界。">
 
 
 
@@ -124,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://www.mihuan123.cn/public/archives/2018/"/>
+  <link rel="canonical" href="http://www.mihuan123.cn/public/2018/07/29/探索es6系列之-Class/"/>
 
 
 
 
 
-  <title>归档 | coder似蜜獾</title>
+  <title>探索es6系列之----Class | coder似蜜獾</title>
   
 
 
@@ -149,7 +151,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -277,222 +279,197 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.mihuan123.cn/public/public/2018/07/29/探索es6系列之-Class/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="蜜獾">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/public/uploads/publicImg/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="coder似蜜獾">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">探索es6系列之----Class</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-29T09:53:49+08:00">
+                2018-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 5 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/public/2018/07/29/探索es6系列之-Class/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/public/2018/07/29/探索es6系列之-Class/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/public/2018/07/29/探索es6系列之-Class/" itemprop="url">
-              
-                <span itemprop="name">探索es6系列之----Class</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-29T09:53:49+08:00"
-              content="2018-07-29" >
-          07-29
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/public/2018/07/17/探索es6系列之-新增数据结构Set与Map/" itemprop="url">
-              
-                <span itemprop="name">探索es6系列之----新增数据结构Set和Map</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-17T11:06:51+08:00"
-              content="2018-07-17" >
-          07-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/public/2018/06/24/探索es6系列之-Generator生成器函数/" itemprop="url">
-              
-                <span itemprop="name">探索es6系列之----Generator生成器函数</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-24T17:27:40+08:00"
-              content="2018-06-24" >
-          06-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/public/2018/06/18/css-doodle肚兜的奇幻之旅/" itemprop="url">
-              
-                <span itemprop="name">css-doodle玩一玩肚兜</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-18T22:29:20+08:00"
-              content="2018-06-18" >
-          06-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
+        <p>  es5中如果想编写面向对象的js代码就得蛋疼的借助prototype，es6顺应民意增加了Class这个语法糖，丰富了js世界。<a id="more"></a></p>
+<h2 id="Class前世今生"><a href="#Class前世今生" class="headerlink" title="Class前世今生"></a>Class前世今生</h2><p> 在es5中js要想实现类语法以及继承等功能相当繁琐以下先来一波es5的Class实现</p>
+<h3 id="es5中的类的定义"><a href="#es5中的类的定义" class="headerlink" title="es5中的类的定义"></a>es5中的类的定义</h3><h4 id="比较认可的一种方式："><a href="#比较认可的一种方式：" class="headerlink" title="比较认可的一种方式："></a>比较认可的一种方式：</h4><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//来个国家的类吧</span><br><span class="line">function Nation(name)&#123;</span><br><span class="line">    this.name = name</span><br><span class="line">    this.attach = &apos;nation&apos;, //都有个共性都是一个国家</span><br><span class="line">&#125;</span><br><span class="line">Nation.prototype.showName = function() &#123;</span><br><span class="line">    console.log(this.name)</span><br><span class="line">&#125;</span><br><span class="line">let japan = new Nation(&apos;Japan&apos;) //等价于 japan = Nation(&apos;Japan&apos;)</span><br><span class="line">japan.showName() // 输出Japan</span><br></pre></td></tr></table></figure>
+</code></pre><p>   — 这样把属性放到构造函数里面，方法放到原型上</p>
+<h3 id="es5中实现继承"><a href="#es5中实现继承" class="headerlink" title="es5中实现继承"></a>es5中实现继承</h3><h4 id="1）原型链继承（将父类的实例作为子类的原型）"><a href="#1）原型链继承（将父类的实例作为子类的原型）" class="headerlink" title="1）原型链继承（将父类的实例作为子类的原型）"></a>1）原型链继承（将父类的实例作为子类的原型）</h4><pre><code>还是利用上面的类
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function USA() &#123;</span><br><span class="line">    Nation.call(this); //用USA的实例去执行Nation  划重点了，期末会考😜</span><br><span class="line">    this.age = 42 //1776年成立的</span><br><span class="line">&#125;</span><br><span class="line">USA.prototype = new Nation() //划重点了，期末会考😜 </span><br><span class="line">                            //注意了注意了，这里很多小伙伴可能会觉得多余了，不是再构造函数里面继承了吗？？？大可删了试试，不是B不能用了，而是usa instanceof Nation == false 了</span><br><span class="line">USA.prototype.nba = &apos;nice&apos;</span><br><span class="line">console.log(usa.attach) //继承到了nation</span><br><span class="line">console.log(usa.constructor) //ƒunction Nation(name)&#123; this.name = name;this.attach = &apos;nation&apos;&#125;//这并不是我们想要的</span><br><span class="line">USA.prototype.constructor = USA;</span><br><span class="line">console.log(usa.constructor) //修正一下构造函数</span><br><span class="line">console.log(usa instanceof Nation) //true 实例这是我们先要的</span><br><span class="line">console.log(usa instanceof USA) //true 实例这是我们先要的</span><br></pre></td></tr></table></figure>
+</code></pre><h4 id="2）直接copy继承"><a href="#2）直接copy继承" class="headerlink" title="2）直接copy继承"></a>2）直接copy继承</h4><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function USA() &#123;</span><br><span class="line">    var nationIns = new Nation(&apos;English&apos;)</span><br><span class="line">    for(var n in nationIns)&#123; //用&#123;...&#125;也行</span><br><span class="line">        USA.prototype[n] = nationIns[n]</span><br><span class="line">    &#125;</span><br><span class="line">    this.age = 42 //1776年成立的</span><br><span class="line">&#125;</span><br><span class="line">var usa =  new USA()</span><br><span class="line">console.log(usa.attach) //继承到了nation</span><br><span class="line">console.log(usa.constructor) //ƒunction USA()&#123; ...&#125;</span><br></pre></td></tr></table></figure>
+</code></pre><h2 id="Class的今生"><a href="#Class的今生" class="headerlink" title="Class的今生"></a>Class的今生</h2><pre><code>### 1). Class的用法
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Class Me &#123; //typeof Me -&gt; function</span><br><span class="line">    constructor(x,y)&#123;</span><br><span class="line">        this.x = x</span><br><span class="line">        this.y = y</span><br><span class="line">    &#125;</span><br><span class="line">    haha() &#123;</span><br><span class="line">        alert(&apos;哈哈&apos;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">// Object.keys(Me.prototype) -&gt; [] 不可枚举,要用Object.getOWnPrototypeNames</span><br><span class="line">//以上写法等同于 </span><br><span class="line">Me.prototype = &#123;</span><br><span class="line">    constructor(x,y) &#123;...&#125;,</span><br><span class="line">    hah() &#123;...&#125;</span><br><span class="line">&#125;</span><br><span class="line">//es5中属性方法可以枚举 </span><br><span class="line"></span><br><span class="line">☛这两者得区别：① 上面说的可枚举性不同</span><br><span class="line">              ② Class不存在变量提升</span><br></pre></td></tr></table></figure>
 
-        
-        
-        
+再补充一个我新get的点，虽然有点乱但是很重要得记录下： 实例.__proto__  &lt;==&gt; 类.prototype
+                                                子类.__proto__ &lt;==&gt; 父类 &lt;==&gt; 父类.prototype
+### 2) Class的继承
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Class 子类 extends 父类 &#123;</span><br><span class="line">    constructor(x,y) &#123;</span><br><span class="line">        super(x,y) //调用父类的constructor 如果要拓展子类就必须显示调用 super(param) 否则可以省略constructor 会自动补上</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        
-        
+Class里面可以设置getter,setter拦截函数
+Class Haha{
+    constructor(x){
+        super(x)
+        this.name = &apos;name&apos;+x
+    }
+    get name() {
+        return this.name
+    }
+    set name() {
+        return &apos;不能改&apos;
+    }
+}
 
-        
+### 3).Class的静态方法属性
+Class Foo{
+    static method1() { //直接可以调用不用在实例化后才能调用
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/public/2018/06/12/开启我的新博客之旅/" itemprop="url">
-              
-                <span itemprop="name">开启我的新博客之旅</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-12T17:27:47+08:00"
-              content="2018-06-12" >
-          06-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+    }
+    static bool = true //直接可以调用不用在实例化后才能调用
+}
+</code></pre>
       
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/public/tags/js-es6/" rel="tag"># js(es6)</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/public/2018/07/17/探索es6系列之-新增数据结构Set与Map/" rel="next" title="探索es6系列之----新增数据结构Set和Map">
+                <i class="fa fa-chevron-left"></i> 探索es6系列之----新增数据结构Set和Map
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -500,6 +477,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzUxMy8xNDA0NQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -520,8 +506,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -601,6 +596,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Class前世今生"><span class="nav-number">1.</span> <span class="nav-text">Class前世今生</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#es5中的类的定义"><span class="nav-number">1.1.</span> <span class="nav-text">es5中的类的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#比较认可的一种方式："><span class="nav-number">1.1.1.</span> <span class="nav-text">比较认可的一种方式：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#es5中实现继承"><span class="nav-number">1.2.</span> <span class="nav-text">es5中实现继承</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1）原型链继承（将父类的实例作为子类的原型）"><span class="nav-number">1.2.1.</span> <span class="nav-text">1）原型链继承（将父类的实例作为子类的原型）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2）直接copy继承"><span class="nav-number">1.2.2.</span> <span class="nav-text">2）直接copy继承</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Class的今生"><span class="nav-number">2.</span> <span class="nav-text">Class的今生</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -741,6 +752,11 @@
   
 
   
+  <script type="text/javascript" src="/public/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/public/js/src/post-details.js?v=5.1.4"></script>
+
+
+
 
   
 
@@ -769,6 +785,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
