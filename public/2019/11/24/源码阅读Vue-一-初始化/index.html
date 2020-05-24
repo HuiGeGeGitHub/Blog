@@ -74,7 +74,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="源码," />
 
 
 
@@ -85,16 +85,18 @@
 
 
 
-<meta name="description" content="记录成长点滴">
-<meta property="og:type" content="website">
-<meta property="og:title" content="coder似蜜獾">
-<meta property="og:url" content="http://www.mihuan123.cn/public/archives/2018/11/index.html">
+<meta name="description" content="Vue初始化，new Vue()的操作，合并默认配置与用户的option, 也可以顺着思路了解Vue的静态属性use等等源代码">
+<meta name="keywords" content="源码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="源码阅读Vue-一-初始化">
+<meta property="og:url" content="http://www.mihuan123.cn/public/2019/11/24/源码阅读Vue-一-初始化/index.html">
 <meta property="og:site_name" content="coder似蜜獾">
-<meta property="og:description" content="记录成长点滴">
+<meta property="og:description" content="Vue初始化，new Vue()的操作，合并默认配置与用户的option, 也可以顺着思路了解Vue的静态属性use等等源代码">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-05-24T03:54:07.877Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="coder似蜜獾">
-<meta name="twitter:description" content="记录成长点滴">
+<meta name="twitter:title" content="源码阅读Vue-一-初始化">
+<meta name="twitter:description" content="Vue初始化，new Vue()的操作，合并默认配置与用户的option, 也可以顺着思路了解Vue的静态属性use等等源代码">
 
 
 
@@ -124,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://www.mihuan123.cn/public/archives/2018/11/"/>
+  <link rel="canonical" href="http://www.mihuan123.cn/public/2019/11/24/源码阅读Vue-一-初始化/"/>
 
 
 
 
 
-  <title>归档 | coder似蜜獾</title>
+  <title>源码阅读Vue-一-初始化 | coder似蜜獾</title>
   
 
 
@@ -149,7 +151,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -277,74 +279,182 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 12 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.mihuan123.cn/public/public/2019/11/24/源码阅读Vue-一-初始化/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="蜜獾">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/public/uploads/publicImg/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="coder似蜜獾">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/public/2018/11/11/成长路上的不要迷失自我/" itemprop="url">
-              
-                <span itemprop="name">成长路上的不要迷失自我</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">源码阅读Vue-一-初始化</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-11T19:48:29+08:00"
-              content="2018-11-11" >
-          11-11
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-24T21:35:12+08:00">
+                2019-11-24
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/public/2019/11/24/源码阅读Vue-一-初始化/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/public/2019/11/24/源码阅读Vue-一-初始化/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+
+          
+              <div class="post-description">
+                  Vue初始化，new Vue()的操作，合并默认配置与用户的option, 也可以顺着思路了解Vue的静态属性use等等源代码
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <h1 id="源码阅读-Vue（一）初始化"><a href="#源码阅读-Vue（一）初始化" class="headerlink" title="源码阅读 Vue（一）初始化"></a>源码阅读 Vue（一）初始化</h1><h2 id="1-Vue总体结构"><a href="#1-Vue总体结构" class="headerlink" title="1.Vue总体结构"></a>1.Vue总体结构</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">src</span><br><span class="line">  ├── compiler        # 编译相关 </span><br><span class="line">  ├── core            # 核心代码 </span><br><span class="line">  ├── platforms       # 不同平台的支持</span><br><span class="line">  ├── server          # 服务端渲染</span><br><span class="line">  ├── sfc             # .vue 文件解析</span><br><span class="line">  ├── shared          # 共享代码</span><br></pre></td></tr></table></figure>
+<h2 id="2-Vue-初始化（new-Vue）"><a href="#2-Vue-初始化（new-Vue）" class="headerlink" title="2. Vue 初始化（new Vue）"></a>2. Vue 初始化（new Vue）</h2><p>合并配置，初始化生命周期，初始化事件中心，初始化渲染，初始化 data、props、computed、watcher 等等</p>
+<iframe src="https://carbon.now.sh/embed?bg=rgba(171%2C%20184%2C%20195%2C%201)&t=dracula&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=18px&lh=132%25&si=false&es=2x&wm=false&code=if%2520(process.env.NODE_ENV%2520!%253D%253D%2520'production')%2520%257B%250A%2520%2520initProxy(vm)%250A%257D%2520else%2520%257B%250A%2520%2520vm._renderProxy%2520%253D%2520vm%250A%257D%250A%252F%252F%2520expose%2520real%2520self%250Avm._self%2520%253D%2520vm%250AinitLifecycle(vm)%250AinitEvents(vm)%250AinitRender(vm)%250AcallHook(vm%252C%2520'beforeCreate')%250AinitInjections(vm)%2520%252F%252F%2520resolve%2520injections%2520before%2520data%252Fprops%250AinitState(vm)%250AinitProvide(vm)%2520%252F%252F%2520resolve%2520provide%2520after%2520data%252Fprops%250AcallHook(vm%252C%2520'created')" style="width:1024px; height:430px; border:0; overflow:hidden;" sandbox="allow-scripts allow-same-origin"><br></iframe>
+
+<h2 id="3-Vue-Render-里的VNode-createElement"><a href="#3-Vue-Render-里的VNode-createElement" class="headerlink" title="3. Vue Render 里的VNode(createElement)"></a>3. Vue Render 里的VNode(createElement)</h2><p> Vue initRender()内部有两个方法:</p>
+<iframe src="https://carbon.now.sh/embed?bg=rgba(171%2C%20184%2C%20195%2C%201)&t=dracula&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=18px&lh=132%25&si=false&es=2x&wm=false&code=vm._c%2520%253D%2520(a%252C%2520b%252C%2520c%252C%2520d)%2520%253D%253E%2520createElement(vm%252C%2520a%252C%2520b%252C%2520c%252C%2520d%252C%2520false)%250Avm.%2524createElement%2520%253D%2520(a%252C%2520b%252C%2520c%252C%2520d)%2520%253D%253E%2520createElement(vm%252C%2520a%252C%2520b%252C%2520c%252C%2520d%252C%2520true)" style="width:1024px; height:153px; border:0; overflow:hidden;" sandbox="allow-scripts allow-same-origin"><br></iframe>
+
+<p>createElement的本质调用了_createElement：</p>
+<iframe src="https://carbon.now.sh/embed?bg=rgba(171%2C%20184%2C%20195%2C%201)&t=dracula&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=18px&lh=132%25&si=false&es=2x&wm=false&code=function%2520createElement%2520(%250A%2520%2520context%253A%2520Component%252C%250A%2520%2520tag%253A%2520any%252C%250A%2520%2520data%253A%2520any%252C%250A%2520%2520children%253A%2520any%252C%250A%2520%2520normalizationType%253A%2520any%252C%250A%2520%2520alwaysNormalize%253A%2520boolean%250A)%257B%250A%2520%2520if%2520(Array.isArray(data)%2520%257C%257C%2520isPrimitive(data))%2520%257B%250A%2520%2520%2520%2520normalizationType%2520%253D%2520children%250A%2520%2520%2520%2520children%2520%253D%2520data%250A%2520%2520%2520%2520data%2520%253D%2520undefined%250A%2520%2520%257D%250A%2520%2520if%2520(isTrue(alwaysNormalize))%2520%257B%250A%2520%2520%2520%2520normalizationType%2520%253D%2520ALWAYS_NORMALIZE%250A%2520%2520%257D%250A%2520%2520return%2520_createElement(context%252C%2520tag%252C%2520data%252C%2520children%252C%250A%2520%2520normalizationType)%2520%252F%252F%2520%2509normalizationType%2520%25E4%25B8%25BA1%25E6%2588%25962%250A%257D" style="width:1024px; height:520px; border:0; overflow:hidden;" sandbox="allow-scripts allow-same-origin"><br></iframe><br><iframe src="https://carbon.now.sh/embed?bg=rgba(171%2C%20184%2C%20195%2C%201)&t=dracula&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=18px&lh=132%25&si=false&es=2x&wm=false&code=function%2520createElement%2520(%250A%2520%2520context%253A%2520Component%252C%250A%2520%2520tag%253A%2520any%252C%250A%2520%2520data%253A%2520any%252C%250A%2520%2520children%253A%2520any%252C%250A%2520%2520normalizationType%253A%2520any%252C%250A%2520%2520alwaysNormalize%253A%2520boolean%250A)%257B%250A%2520%2520if%2520(Array.isArray(data)%2520%257C%257C%2520isPrimitive(data))%2520%257B%250A%2520%2520%2520%2520normalizationType%2520%253D%2520children%250A%2520%2520%2520%2520children%2520%253D%2520data%250A%2520%2520%2520%2520data%2520%253D%2520undefined%250A%2520%2520%257D%250A%2520%2520if%2520(isTrue(alwaysNormalize))%2520%257B%250A%2520%2520%2520%2520normalizationType%2520%253D%2520ALWAYS_NORMALIZE%250A%2520%2520%257D%250A%2520%2520return%2520_createElement(context%252C%2520tag%252C%2520data%252C%2520children%252C%250A%2520%2520normalizationType)%2520%252F%252F%2520%2509normalizationType%2520%25E4%25B8%25BA1%25E6%2588%25962%250A%257D%250A....%250Afunction%2520_createElement(%2520%250A%2520%2520%2520%2520context%253A%2520Component%252C%250A%2520%2520%2520%2520tag%253F%253A%2520string%2520%257C%2520Class%253CComponent%253E%2520%257C%2520Function%2520%257C%2520Object%252C%250A%2520%2520%2520%2520data%253F%253A%2520VNodeData%252C%250A%2520%2520%2520%2520children%253F%253A%2520any%252C%250A%2520%2520%2520%2520normalizationType%253F%253A%2520number%250A)%250A%250A%2509%252F%252F%2520support%2520single%2520function%2520children%2520as%2520default%2520scoped%2520slot%250A%2520%2520%2520%2520if%2520(Array.isArray(children)%2520%2526%2526%250A%2520%2520%2520%2520%2520%2520typeof%2520children%255B0%255D%2520%253D%253D%253D%2520'function'%250A%2520%2520%2520%2520)%2520%257B%250A%2520%2520%2520%2520%2520%2520data%2520%253D%2520data%2520%257C%257C%2520%257B%257D%250A%2520%2520%2520%2520%2520%2520data.scopedSlots%2520%253D%2520%257B%2520default%253A%2520children%255B0%255D%2520%257D%250A%2520%2520%2520%2520%2520%2520children.length%2520%253D%25200%250A%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520if%2520(normalizationType%2520%253D%253D%253D%2520ALWAYS_NORMALIZE)%2520%257B%250A%2520%2520%2520%2520%2520%2520children%2520%253D%2520normalizeChildren(children)%250A%2520%2520%2520%2520%257D%2520else%2520if%2520(normalizationType%2520%253D%253D%253D%2520SIMPLE_NORMALIZE)%2520%257B%250A%2520%2520%2520%2520%2520%2520children%2520%253D%2520simpleNormalizeChildren(children)%250A%2520%2520%2520%2520%257D%250A%250A.....%250A%250A%2520%2520if%2520(typeof%2520tag%2520%253D%253D%253D%2520'string')%2520%257B%250A%2520%2520%2520%2520let%2520Ctor%250A%2520%2520%2520%2520ns%2520%253D%2520(context.%2524vnode%2520%2526%2526%2520context.%2524vnode.ns)%2520%257C%257C%2520config.getTagNamespace(tag)%250A%2520%2520%2520%2520if%2520(config.isReservedTag(tag))%2520%257B%250A%2520%2520%2520%2520%2520%2520%252F%252F%2520platform%2520built-in%2520elements%250A%2520%2520%2520%2520%2520%2520vnode%2520%253D%2520new%2520VNode(%250A%2520%2520%2520%2520%2520%2520%2520%2520config.parsePlatformTagName(tag)%252C%2520data%252C%2520children%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520undefined%252C%2520undefined%252C%2520context%250A%2520%2520%2520%2520%2520%2520)%250A%2520%2520%2520%2520%257D%2520else%2520if%2520(isDef(Ctor%2520%253D%2520resolveAsset(context.%2524options%252C%2520'components'%252C%2520tag)))%2520%257B%250A%2520%2520%2520%2520%2520%2520%252F%252F%2520component%250A%2520%2520%2520%2520%2520%2520vnode%2520%253D%2520createComponent(Ctor%252C%2520data%252C%2520context%252C%2520children%252C%2520tag)%250A%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520vnode%2520%253D%2520new%2520VNode(%250A%2520%2520%2520%2520%2520%2520%2520%2520tag%252C%2520data%252C%2520children%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520undefined%252C%2520undefined%252C%2520context%250A%2520%2520%2520%2520%2520%2520)%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%252F%252F%2520direct%2520component%2520options%2520%252F%2520constructor%250A%2520%2520%2520%2520vnode%2520%253D%2520createComponent(tag%252C%2520data%252C%2520context%252C%2520children)%250A%2520%2520%257D%250A%257D" style="width:1024px; height:473px; border:0; overflow:hidden;" sandbox="allow-scripts allow-same-origin"><br></iframe>
+
+<p>解析：<br>children 的处理：<br>根据normalizationType 不同判断执行simpleNormalizeChildren与normalizeChildren。<br>如果是用的render（(createElement: () =&gt; VNode) =&gt; VNode）是编译出来的则用simpleNormalizeChildren(模板编译)；<br>调用normalizeChildren 的场景有: ①. render 函数是用户手写的 ②.当编译 slot、v-for 的时候会产生嵌套数组的情况，会调用 normalizeArrayChildren 方法（可以理解为多个normalizeChildren ）</p>
+<p>VNode 的创建：<br>tag为string: 如果是内置的一些节点，则直接创建一个普通 VNode, 如果是为已注册的组件名，则通过 createComponent 创建一个组件类型的 VNode,否则创建一个未知的标签的 VNode<br>tag 为component 调用createComponent返回VNode</p>
+<h2 id="4调用vm-update更新视图"><a href="#4调用vm-update更新视图" class="headerlink" title="4调用vm._update更新视图"></a>4调用vm._update更新视图</h2><p>通过vm_patch，生成相应的真实DOM</p>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/public/tags/源码/" rel="tag"># 源码</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/public/2019/03/24/关于google-recaptcha-v3骚包人机验证/" rel="next" title="关于google recaptcha v3骚包人机验证">
+                <i class="fa fa-chevron-left"></i> 关于google recaptcha v3骚包人机验证
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/public/2019/11/25/源码阅读Vue-二-组件注册与生命周期/" rel="prev" title="源码阅读Vue(二) 组件注册与生命周期">
+                源码阅读Vue(二) 组件注册与生命周期 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -352,6 +462,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzUxMy8xNDA0NQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -372,8 +491,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -453,6 +581,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#源码阅读-Vue（一）初始化"><span class="nav-number">1.</span> <span class="nav-text">源码阅读 Vue（一）初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Vue总体结构"><span class="nav-number">1.1.</span> <span class="nav-text">1.Vue总体结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Vue-初始化（new-Vue）"><span class="nav-number">1.2.</span> <span class="nav-text">2. Vue 初始化（new Vue）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Vue-Render-里的VNode-createElement"><span class="nav-number">1.3.</span> <span class="nav-text">3. Vue Render 里的VNode(createElement)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4调用vm-update更新视图"><span class="nav-number">1.4.</span> <span class="nav-text">4调用vm._update更新视图</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -593,6 +737,11 @@
   
 
   
+  <script type="text/javascript" src="/public/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/public/js/src/post-details.js?v=5.1.4"></script>
+
+
+
 
   
 
@@ -621,6 +770,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

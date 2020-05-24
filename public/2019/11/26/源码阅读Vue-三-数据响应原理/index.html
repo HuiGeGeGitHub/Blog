@@ -74,7 +74,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="源码," />
 
 
 
@@ -85,16 +85,20 @@
 
 
 
-<meta name="description" content="记录成长点滴">
-<meta property="og:type" content="website">
-<meta property="og:title" content="coder似蜜獾">
-<meta property="og:url" content="http://www.mihuan123.cn/public/archives/2018/11/index.html">
+<meta name="description" content="数据响应原理 数据绑定的核心代码 Object.defineproperty及订阅监听, 实现所谓的MVVM,以及一些data,props的代理">
+<meta name="keywords" content="源码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="源码阅读Vue(三) 数据响应原理">
+<meta property="og:url" content="http://www.mihuan123.cn/public/2019/11/26/源码阅读Vue-三-数据响应原理/index.html">
 <meta property="og:site_name" content="coder似蜜獾">
-<meta property="og:description" content="记录成长点滴">
+<meta property="og:description" content="数据响应原理 数据绑定的核心代码 Object.defineproperty及订阅监听, 实现所谓的MVVM,以及一些data,props的代理">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ustbhuangyi.github.io/vue-analysis/assets/reactive.png">
+<meta property="og:updated_time" content="2020-05-24T03:52:14.187Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="coder似蜜獾">
-<meta name="twitter:description" content="记录成长点滴">
+<meta name="twitter:title" content="源码阅读Vue(三) 数据响应原理">
+<meta name="twitter:description" content="数据响应原理 数据绑定的核心代码 Object.defineproperty及订阅监听, 实现所谓的MVVM,以及一些data,props的代理">
+<meta name="twitter:image" content="https://ustbhuangyi.github.io/vue-analysis/assets/reactive.png">
 
 
 
@@ -124,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://www.mihuan123.cn/public/archives/2018/11/"/>
+  <link rel="canonical" href="http://www.mihuan123.cn/public/2019/11/26/源码阅读Vue-三-数据响应原理/"/>
 
 
 
 
 
-  <title>归档 | coder似蜜獾</title>
+  <title>源码阅读Vue(三) 数据响应原理 | coder似蜜獾</title>
   
 
 
@@ -149,7 +153,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -277,74 +281,176 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 12 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.mihuan123.cn/public/public/2019/11/26/源码阅读Vue-三-数据响应原理/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="蜜獾">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/public/uploads/publicImg/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="coder似蜜獾">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/public/2018/11/11/成长路上的不要迷失自我/" itemprop="url">
-              
-                <span itemprop="name">成长路上的不要迷失自我</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">源码阅读Vue(三) 数据响应原理</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-11T19:48:29+08:00"
-              content="2018-11-11" >
-          11-11
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-26T19:55:36+08:00">
+                2019-11-26
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/public/2019/11/26/源码阅读Vue-三-数据响应原理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/public/2019/11/26/源码阅读Vue-三-数据响应原理/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+
+          
+              <div class="post-description">
+                  数据响应原理 数据绑定的核心代码 Object.defineproperty及订阅监听, 实现所谓的MVVM,以及一些data,props的代理
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <h1 id="源码阅读Vue-三-数据响应原理"><a href="#源码阅读Vue-三-数据响应原理" class="headerlink" title="源码阅读Vue(三) 数据响应原理"></a>源码阅读Vue(三) 数据响应原理</h1><h2 id="1-initProps-initData"><a href="#1-initProps-initData" class="headerlink" title="1.initProps / initData"></a>1.initProps / initData</h2><iframe src="https://carbon.now.sh/embed?bg=rgba(171%2C%20184%2C%20195%2C%201)&t=dracula&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=18px&lh=132%25&si=false&es=2x&wm=false&code=function%2520initProps%2520(vm%253A%2520Component%252C%2520propsOptions%253A%2520Object)%2520%257B%250A%2520%2520const%2520propsData%2520%253D%2520vm.%2524options.propsData%2520%257C%257C%2520%257B%257D%250A%2520%2520const%2520props%2520%253D%2520vm._props%2520%253D%2520%257B%257D%250A%2520%2520....%250A%2520%2520defineReactive(props%252C%2520key%252C%2520value)%250A%2520%2520....%250A%2520%2520%250A%2520%2520if%2520(!(key%2520in%2520vm))%2520%257B%250A%2520%2520%2520%2520%2520%2520proxy(vm%252C%2520%2560_props%2560%252C%2520key)%250A%2520%2520%257D%250A%2520%2520toggleObserving(true)%250A%257D%250A%250Afunction%2520initData%2520(vm%253A%2520Component)%2520%257B%250A%2520%2520let%2520data%2520%253D%2520vm.%2524options.data%250A%2520%2520data%2520%253D%2520vm._data%2520%253D%2520typeof%2520data%2520%253D%253D%253D%2520'function'%250A%2520%2520%2520%2520%253F%2520getData(data%252C%2520vm)%250A%2520%2520%2520%2520%253A%2520data%2520%257C%257C%2520%257B%257D%250A%2520%2520....%250A%2520%2520proxy(vm%252C%2520%2560_data%2560%252C%2520key)%250A%2520%2520....%250A%2520%2520%252F%252F%2520observe%2520data%250A%2520%2520observe(data%252C%2520true%2520%252F*%2520asRootData%2520*%252F)%250A%257D%250A" style="width:1024px; height:673px; border:0; overflow:hidden;" sandbox="allow-scripts allow-same-origin"><br></iframe>
+
+<p>initData 同理， 都用了proxy（例如this.xx == this._props.xx）, 另外initprops用到了 defineReactive(props, key, value)/<strong>里面遇到object会递归调用observe</strong>/，initData 用到了observe</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> sharedPropertyDefinition = &#123;</span><br><span class="line">  enumerable: <span class="literal">true</span>,</span><br><span class="line">  configurable: <span class="literal">true</span>,</span><br><span class="line">  get: noop, <span class="comment">// noop 空函数</span></span><br><span class="line">  set: noop</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">proxy</span> (<span class="params">target: Object, sourceKey: string, key: string</span>) </span>&#123;</span><br><span class="line">  sharedPropertyDefinition.get = <span class="function"><span class="keyword">function</span> <span class="title">proxyGetter</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>[sourceKey][key]</span><br><span class="line">  &#125;</span><br><span class="line">  sharedPropertyDefinition.set = <span class="function"><span class="keyword">function</span> <span class="title">proxySetter</span> (<span class="params">val</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>[sourceKey][key] = val</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">Object</span>.defineProperty(target, key, sharedPropertyDefinition)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<iframe src="https://carbon.now.sh/embed?bg=rgba(171%2C%20184%2C%20195%2C%201)&t=dracula&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=18px&lh=132%25&si=false&es=2x&wm=false&code=export%2520function%2520observe%2520(value%252C%2520asRootData%253A%2520%253Fboolean)%2520%257B%250A%2520%2520if%2520(!isObject(value)%2520%257C%257C%2520value%2520instanceof%2520VNode)%2520%257B%250A%2520%2520%2520%2520return%250A%2520%2520%257D%250A%2520%2520let%2520ob%253A%2520Observer%2520%257C%2520void%250A%2520%2520if%2520(hasOwn(value%252C%2520'__ob__')%2520%2526%2526%2520value.__ob__%2520instanceof%2520Observer)%2520%257B%250A%2520%2520%2520%2520ob%2520%253D%2520value.__ob__%250A%2520%2520%257D%2520else%2520if%2520(%250A%2520%2520%2520%2520shouldObserve%2520%2526%2526%250A%2520%2520%2520%2520!isServerRendering()%2520%2526%2526%250A%2520%2520%2520%2520(Array.isArray(value)%2520%257C%257C%2520isPlainObject(value))%2520%2526%2526%250A%2520%2520%2520%2520Object.isExtensible(value)%2520%2526%2526%250A%2520%2520%2520%2520!value._isVue%250A%2520%2520)%2520%257B%250A%2520%2520%2520%2520ob%2520%253D%2520new%2520Observer(value)%250A%2520%2520%257D%250A%2520%2520if%2520(asRootData%2520%2526%2526%2520ob)%2520%257B%250A%2520%2520%2520%2520ob.vmCount%252B%252B%250A%2520%2520%257D%250A%2520%2520return%2520ob%250A%257D" style="width:1024px; height:573px; border:0; overflow:hidden;" sandbox="allow-scripts allow-same-origin"><br></iframe><br>注： Observer 是一个类，它的作用是给对象的属性添加 getter 和 setter，用于依赖收集和派发更新：<br><iframe src="https://carbon.now.sh/embed?bg=rgba(171%2C%20184%2C%20195%2C%201)&t=dracula&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=18px&lh=132%25&si=false&es=2x&wm=false&code=export%2520class%2520Observer%2520%257B%2520%252F%252F%2520%25E8%25AE%25A2%25E9%2598%2585%250A%2520%2520value%253A%2520any%253B%250A%2520%2520dep%253A%2520Dep%253B%250A%2520%2520vmCount%253A%2520number%253B%2520%250A%2520%2520%252F%252F%2520number%2520of%2520vms%2520that%2520has%2520this%2520object%2520as%2520root%2520%2524data%250A%2520%2520constructor%2520(value%253A%2520any)%2520%257B%250A%2520%2520%2520%2520this.value%2520%253D%2520value%250A%2520%2520%2520%2520this.dep%2520%253D%2520new%2520Dep()%250A%2520%2520%2520%2520this.vmCount%2520%253D%25200%250A%2520%2520%2520%2520def(value%252C%2520'__ob__'%252C%2520this)%250A%2520%2520%2520%2520if%2520(Array.isArray(value))%2520%257B%250A%2520%2520%2520%2520%2520%2520const%2520augment%2520%253D%2520hasProto%250A%2520%2520%2520%2520%2520%2520%2520%2520%253F%2520protoAugment%250A%2520%2520%2520%2520%2520%2520%2520%2520%253A%2520copyAugment%250A%2520%2520%2520%2520%2520%2520augment(value%252C%2520arrayMethods%252C%2520arrayKeys)%250A%2520%2520%2520%2520%2520%2520this.observeArray(value)%2520%252F%252F%2520%25E6%2595%25B0%25E7%25BB%2584%25E5%258D%2595%25E7%258B%25AC%25E5%25A4%2584%25E7%2590%2586%250A%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520this.walk(value)%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%2520%2520walk%2520(obj%253A%2520Object)%2520%257B%250A%2520%2520%2520%2520const%2520keys%2520%253D%2520Object.keys(obj)%250A%2520%2520%2520%2520for%2520(let%2520i%2520%253D%25200%253B%2520i%2520%253C%2520keys.length%253B%2520i%252B%252B)%2520%257B%250A%2520%2520%2520%2520%2520%2520defineReactive(obj%252C%2520keys%255Bi%255D)%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%2520%2520observeArray%2520(items%253A%2520Array%253Cany%253E)%2520%257B%250A%2520%2520%2520%2520for%2520(let%2520i%2520%253D%25200%252C%2520l%2520%253D%2520items.length%253B%2520i%2520%253C%2520l%253B%2520i%252B%252B)%2520%257B%250A%2520%2520%2520%2520%2520%2520observe(items%255Bi%255D)%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%257D" style="width:1024px; height:820px; border:0; overflow:hidden;" sandbox="allow-scripts allow-same-origin"><br></iframe>
+
+<p>反思： 为什么不把数组和object一样通过key值逐一添加监听呢？object的新增的属性也是同无法响应式。<br>答： 增加数组下标响应式对性能会有影响，要对每一个下标key做监听，会要非常多的监听器，而且由于代码实现会导致绑定两边getter setter ，而vue是通过hack数组的pop, push, splice这些会改变原数组的。硬绑上新加的值得监听器。还可以通过Vue.set去手动该值并绑监听</p>
+<h2 id="2-defineReactive-核心"><a href="#2-defineReactive-核心" class="headerlink" title="2. defineReactive(核心)"></a>2. defineReactive(核心)</h2><iframe src="https://carbon.now.sh/embed?bg=rgba(171%2C%20184%2C%20195%2C%201)&t=dracula&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=18px&lh=132%25&si=false&es=2x&wm=false&code=export%2520function%2520defineReactive%2520(%250A%2520%2520obj%253A%2520Object%252C%250A%2520%2520key%253A%2520string%252C%250A%2520%2520val%253A%2520any%252C%250A%2520%2520customSetter%253F%253A%2520%253FFunction%252C%250A%2520%2520shallow%253F%253A%2520boolean%250A)%2520%257B%250A%2520%2520const%2520dep%2520%253D%2520new%2520Dep()%250A%250A%2520%2520const%2520property%2520%253D%2520Object.getOwnPropertyDescriptor(obj%252C%2520key)%250A%2520%2520if%2520(property%2520%2526%2526%2520property.configurable%2520%253D%253D%253D%2520false)%2520%257B%250A%2520%2520%2520%2520return%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520cater%2520for%2520pre-defined%2520getter%252Fsetters%250A%2520%2520const%2520getter%2520%253D%2520property%2520%2526%2526%2520property.get%250A%2520%2520if%2520(!getter%2520%2526%2526%2520arguments.length%2520%253D%253D%253D%25202)%2520%257B%250A%2520%2520%2520%2520val%2520%253D%2520obj%255Bkey%255D%250A%2520%2520%257D%250A%2520%2520const%2520setter%2520%253D%2520property%2520%2526%2526%2520property.set%250A%250A%2520%2520let%2520childOb%2520%253D%2520!shallow%2520%2526%2526%2520observe(val)%250A%2520%2520Object.defineProperty(obj%252C%2520key%252C%2520%257B%250A%2520%2520%2520%2520enumerable%253A%2520true%252C%250A%2520%2520%2520%2520configurable%253A%2520true%252C%250A%2520%2520%2520%2520get%253A%2520function%2520reactiveGetter%2520()%2520%257B%250A%2520%2520%2520%2520%2520%2520const%2520value%2520%253D%2520getter%2520%253F%2520getter.call(obj)%2520%253A%2520val%250A%2520%2520%2520%2520%2520%2520if%2520(Dep.target)%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520dep.depend()%250A%2520%2520%2520%2520%2520%2520%2520%2520if%2520(childOb)%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520childOb.dep.depend()%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520if%2520(Array.isArray(value))%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520dependArray(value)%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520return%2520value%250A%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520set%253A%2520function%2520reactiveSetter%2520(newVal)%2520%257B%250A%2520%2520%2520%2520%2520%2520const%2520value%2520%253D%2520getter%2520%253F%2520getter.call(obj)%2520%253A%2520val%250A%2520%2520%2520%2520%2520%2520%252F*%2520eslint-disable%2520no-self-compare%2520*%252F%250A%2520%2520%2520%2520%2520%2520if%2520(newVal%2520%253D%253D%253D%2520value%2520%257C%257C%2520(newVal%2520!%253D%253D%2520newVal%2520%2526%2526%2520value%2520!%253D%253D%2520value))%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520return%250A%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%252F*%2520eslint-enable%2520no-self-compare%2520*%252F%250A%2520%2520%2520%2520%2520%2520if%2520(process.env.NODE_ENV%2520!%253D%253D%2520'production'%2520%2526%2526%2520customSetter)%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520customSetter()%250A%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520if%2520(setter)%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520setter.call(obj%252C%2520newVal)%250A%2520%2520%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520val%2520%253D%2520newVal%250A%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520childOb%2520%253D%2520!shallow%2520%2526%2526%2520observe(newVal)%250A%2520%2520%2520%2520%2520%2520dep.notify()%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D)%250A%257D" style="width:1024px; height:473px; border:0; overflow:hidden;" sandbox="allow-scripts allow-same-origin"><br></iframe>
+
+<h2 id="3-Dep多次出现的上面的引用定义（订阅依赖收集（get），-派发更新-set-）"><a href="#3-Dep多次出现的上面的引用定义（订阅依赖收集（get），-派发更新-set-）" class="headerlink" title="3. Dep多次出现的上面的引用定义（订阅依赖收集（get）， 派发更新(set)）"></a>3. Dep多次出现的上面的引用定义（订阅依赖收集（get）， 派发更新(set)）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">export default class Dep &#123;</span><br><span class="line">  static target: ?Watcher;</span><br><span class="line">  id: number;</span><br><span class="line">  subs: Array&lt;Watcher&gt;;</span><br><span class="line"></span><br><span class="line">  constructor () &#123;</span><br><span class="line">    this.id = uid++</span><br><span class="line">    this.subs = []</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  addSub (sub: Watcher) &#123;</span><br><span class="line">    this.subs.push(sub)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  removeSub (sub: Watcher) &#123;</span><br><span class="line">    remove(this.subs, sub)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  depend () &#123;</span><br><span class="line">    if (Dep.target) &#123;</span><br><span class="line">      Dep.target.addDep(this)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  Watcher</span><br></pre></td></tr></table></figure>
+<h2 id="4-总结原理图"><a href="#4-总结原理图" class="headerlink" title="4.总结原理图"></a>4.总结原理图</h2><p><img src="https://ustbhuangyi.github.io/vue-analysis/assets/reactive.png" alt="img"></p>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/public/tags/源码/" rel="tag"># 源码</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/public/2019/11/25/源码阅读Vue-二-组件注册与生命周期/" rel="next" title="源码阅读Vue(二) 组件注册与生命周期">
+                <i class="fa fa-chevron-left"></i> 源码阅读Vue(二) 组件注册与生命周期
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -352,6 +458,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzUxMy8xNDA0NQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -372,8 +487,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -453,6 +577,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#源码阅读Vue-三-数据响应原理"><span class="nav-number">1.</span> <span class="nav-text">源码阅读Vue(三) 数据响应原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-initProps-initData"><span class="nav-number">1.1.</span> <span class="nav-text">1.initProps / initData</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-defineReactive-核心"><span class="nav-number">1.2.</span> <span class="nav-text">2. defineReactive(核心)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Dep多次出现的上面的引用定义（订阅依赖收集（get），-派发更新-set-）"><span class="nav-number">1.3.</span> <span class="nav-text">3. Dep多次出现的上面的引用定义（订阅依赖收集（get）， 派发更新(set)）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-总结原理图"><span class="nav-number">1.4.</span> <span class="nav-text">4.总结原理图</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -593,6 +733,11 @@
   
 
   
+  <script type="text/javascript" src="/public/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/public/js/src/post-details.js?v=5.1.4"></script>
+
+
+
 
   
 
@@ -621,6 +766,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
